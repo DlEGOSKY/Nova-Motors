@@ -1,0 +1,18 @@
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cf-group{margin-bottom:12px}
+.cf-lbl{font-size:10px;color:var(--t3);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:block}
+.cf-in{width:100%;background:var(--glass2);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 14px;color:var(--t);font-family:'Inter',sans-serif;font-size:12px;outline:none;transition:all .2s}
+.cf-in:focus{border-color:var(--bdr2);background:rgba(0,200,255,.04)}
+.cf-in::placeholder{color:var(--t3)}
+textarea.cf-in{resize:none;min-height:82px}
+.ci-cards{display:flex;flex-direction:column;gap:12px}
+.ci-card{padding:14px;background:var(--glass2);border:1px solid var(--bdr);border-radius:10px;display:flex;align-items:center;gap:14px}
+.ci-icon{font-size:22px;color:var(--b);flex-shrink:0}
+.ci-title{font-size:12px;font-weight:500;margin-bottom:3px}
+.ci-v{font-size:11px;color:var(--t3);margin-top:2px}
+.socials{display:flex;gap:8px;margin-top:4px}
+.sbtn{width:32px;height:32px;background:var(--glass2);border:1px solid var(--bdr);border-radius:7px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;color:var(--t2);transition:all .2s}
+.sbtn:hover{border-color:var(--bdr2);color:var(--b)}
+.btn-submit{width:100%;padding:12px;background:linear-gradient(135deg,var(--b),#0070AA);color:#fff;border:none;border-radius:9px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.8px;transition:all .25s;margin-top:4px}
+.btn-submit:hover{box-shadow:0 8px 28px rgba(0,200,255,.4);transform:translateY(-1px)}
+.ok-msg{text-align:center;font-size:11px;color:var(--g);padding:8px;background:rgba(0,255,178,.06);border-radius:7px;border:1px solid rgba(0,255,178,.18);margin-top:8px}

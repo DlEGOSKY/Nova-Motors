@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#06060C;--bg2:#0B0B16;--bg3:#0F0F1E;
+  --b:#00C8FF;--p:#9B30FF;--g:#00FFB2;--r:#FF3355;--a:#FF8C00;
+  --t:#F0F0FF;--t2:#8888AA;--t3:#44445A;
+  --glass:rgba(255,255,255,0.04);--glass2:rgba(255,255,255,0.07);
+  --bdr:rgba(0,200,255,0.15);--bdr2:rgba(0,200,255,0.35)
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:'Inter',sans-serif;overflow-x:hidden}
+#root{width:100%}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+
+/* ══ SECTION COMMON ══ */
+.sec{padding:56px 32px}
+.sec-alt{background:var(--bg2)}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:32px}
+.sec-bar{width:3px;height:24px;border-radius:2px;background:linear-gradient(var(--b),var(--p));flex-shrink:0}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px}
+.sec-tag{font-size:10px;color:var(--t3);letter-spacing:2px;text-transform:uppercase;margin-left:auto}
+
+/* ══ SCROLL-REVEAL ══ */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+.reveal.up{opacity:0;transform:translateY(36px)}
+.reveal.left{opacity:0;transform:translateX(-36px)}
+.reveal.right{opacity:0;transform:translateX(36px)}
+.reveal.scale{opacity:0;transform:scale(.92)}
+.reveal.vis{opacity:1 !important;transform:none !important}
+.stagger .reveal:nth-child(1){transition-delay:.05s}
+.stagger .reveal:nth-child(2){transition-delay:.15s}
+.stagger .reveal:nth-child(3){transition-delay:.25s}
+.stagger .reveal:nth-child(4){transition-delay:.35s}
+.stagger .reveal:nth-child(5){transition-delay:.45s}
+.stagger .reveal:nth-child(6){transition-delay:.55s}
+.stagger .reveal:nth-child(7){transition-delay:.65s}
+.stagger .reveal:nth-child(8){transition-delay:.75s}
