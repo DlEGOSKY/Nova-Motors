@@ -14,6 +14,16 @@ const COLORS = [
   { c: '#C8A870', n: 'Champán' },
   { c: '#6B1F88', n: 'Morado' },
 ];
+const SEAT_COLORS = [
+  { c: '#8B4513', n: 'Marrón Natural' },
+  { c: '#1A1A1A', n: 'Negro Carbón' },
+  { c: '#2C2C2C', n: 'Gris Oscuro' },
+  { c: '#8B0000', n: 'Rojo Vino' },
+  { c: '#1C1C3C', n: 'Azul Noche' },
+  { c: '#3C2415', n: 'Marrón Oscuro' },
+  { c: '#4A4A4A', n: 'Gris Acero' },
+  { c: '#5C3D2E', n: 'Caramelo' },
+];
 const SEATS  = ['Cuero Liso', 'Cuero Sport', 'Alcantara', 'Tejido'];
 const WHEELS = ['18" Radial', '20" Turbina', '22" Multirayon', '21" Forjada'];
 const INTERIOR = ['Nogal', 'Carbono', 'Aluminio', 'Piano Black'];
@@ -45,7 +55,17 @@ useEffect(() => {
 
     model.object3D.traverse((node) => {
       if (node.isMesh && node.material) {
-        node.material.color.set(cfg.color);
+        const nodeName = node.name.toLowerCase();
+        
+        if (nodeName.includes('seat') || nodeName.includes('interior') || nodeName.includes('asiento')) {
+          node.material.color.set(cfg.seatColor);
+        } else if (nodeName.includes('wheel') || nodeName.includes('llanta') || nodeName.includes('tire')) {
+          node.material.color.set('#1A1A1A');
+        } else if (nodeName.includes('glass') || nodeName.includes('window') || nodeName.includes('cristal')) {
+          node.material.color.set('#1A2A4A');
+        } else {
+          node.material.color.set(cfg.color);
+        }
       }
     });
 
@@ -59,7 +79,7 @@ useEffect(() => {
     model.removeEventListener("model-loaded", applyColor);
   };
 
-}, [cfg.color]);
+}, [cfg.color, cfg.seatColor]);
 
   return (
     <section id="configurador" className="sec-alt cfg-section">
@@ -96,6 +116,21 @@ useEffect(() => {
                 <div key={s} className={`copt${cfg.s === s ? ' on' : ''}`} onClick={() => updateCfg({ s })}>
                   {s}
                 </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="cgrp">
+            <div className="clbl">Color Asientos</div>
+            <div className="ccolors">
+              {SEAT_COLORS.map((col) => (
+                <div
+                  key={col.c}
+                  className={`ccol${cfg.seatColor === col.c ? ' on' : ''}`}
+                  style={{ background: col.c }}
+                  title={col.n}
+                  onClick={() => updateCfg({ seatColor: col.c, seatColorName: col.n })}
+                />
               ))}
             </div>
           </div>
@@ -201,6 +236,7 @@ useEffect(() => {
           <div className="sum">
             <div className="sum-row"><span>Carrocería</span><span style={{ color: 'var(--b)' }}>{cfg.colorName}</span></div>
             <div className="sum-row"><span>Asientos</span><span style={{ color: 'var(--b)' }}>{cfg.s}</span></div>
+            <div className="sum-row"><span>Color Asientos</span><span style={{ color: 'var(--b)' }}>{cfg.seatColorName}</span></div>
             <div className="sum-row"><span>Llantas</span><span style={{ color: 'var(--b)' }}>{cfg.w}</span></div>
             <div className="sum-row"><span>Interior</span><span style={{ color: 'var(--b)' }}>{cfg.i}</span></div>
           </div>
