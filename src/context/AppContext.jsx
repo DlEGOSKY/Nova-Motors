@@ -7,6 +7,8 @@ export function AppProvider({ children }) {
   const [cfg, setCfg] = useState({
     color: '#101020',
     colorName: 'Negro Abismo',
+    seatColor: '#8B4513',
+    seatColorName: 'Marrón Natural',
     s: 'Cuero Liso',
     w: '18" Radial',
     i: 'Nogal',
