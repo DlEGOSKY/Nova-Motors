@@ -1,0 +1,12 @@
+.nav{position:sticky;top:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:58px;transition:all .4s}
+.nav.scrolled{background:rgba(6,6,12,.94);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,200,255,.08);box-shadow:0 4px 40px rgba(0,0,0,.4)}
+.nav.top{background:transparent}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;background:linear-gradient(90deg,var(--b),var(--p));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;user-select:none}
+.nav-links{display:flex;gap:2px;align-items:center}
+.nb{background:none;border:none;color:var(--t2);padding:9px 16px;font-size:11px;font-family:'Inter',sans-serif;cursor:pointer;border-radius:6px;letter-spacing:1px;transition:all .25s;position:relative;text-transform:uppercase}
+.nb::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%) scaleX(0);width:16px;height:2px;background:var(--b);border-radius:1px;transition:transform .25s}
+.nb:hover{color:var(--t)}
+.nb.on{color:var(--b)}
+.nb.on::after{transform:translateX(-50%) scaleX(1)}
+.fav-nb{position:relative;padding:9px 14px}
+.fav-dot{position:absolute;top:4px;right:6px;width:15px;height:15px;background:var(--p);border-radius:50%;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;color:#fff;transition:transform .2s}

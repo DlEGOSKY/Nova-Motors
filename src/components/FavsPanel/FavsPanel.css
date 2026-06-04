@@ -1,0 +1,12 @@
+.favs-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);align-items:flex-start;justify-content:flex-end;padding:64px 16px 16px}
+.favs-overlay.open{display:flex}
+.favs-panel{background:var(--bg3);border:1px solid var(--bdr);border-radius:14px;width:320px;max-height:80vh;overflow-y:auto;padding:20px}
+.favs-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.favs-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:var(--b)}
+.favs-close{background:none;border:none;color:var(--t2);font-size:20px;cursor:pointer;padding:2px 6px}
+.favs-empty{text-align:center;padding:32px 0;color:var(--t3);font-size:13px}
+.fav-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.fav-name{font-size:12px;font-weight:600}
+.fav-cat{font-size:10px}
+.fav-price{font-family:'Bebas Neue',sans-serif;font-size:14px}
+.fav-remove{background:none;border:none;color:var(--t3);cursor:pointer;font-size:14px}
