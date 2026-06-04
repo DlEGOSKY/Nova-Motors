@@ -1,9 +1,12 @@
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 const AppContext = createContext(null);
 
 export function AppProvider({ children }) {
-  const [favs, setFavs] = useState(new Set());
+  const [favs, setFavs] = useState(() => {
+    const saved = localStorage.getItem('nova_favs');
+    return saved ? new Set(JSON.parse(saved)) : new Set();
+  });
   const [cfg, setCfg] = useState({
     color: '#101020',
     colorName: 'Negro Abismo',
@@ -20,6 +23,10 @@ export function AppProvider({ children }) {
   });
   const [sw, setSw] = useState({ roof: true, sport: false, wing: false, led: true });
   const [favPanelOpen, setFavPanelOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('nova_favs', JSON.stringify(Array.from(favs)));
+  }, [favs]);
 
   const toggleFav = useCallback((id) => {
     setFavs((prev) => {

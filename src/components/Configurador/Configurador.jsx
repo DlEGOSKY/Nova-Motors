@@ -39,6 +39,20 @@ export default function Configurador() {
   const [saved, setSaved] = useState(false);
 
   const handleSave = () => {
+    const configData = {
+      ...cfg,
+      extras: sw,
+      timestamp: new Date().toISOString(),
+      totalPrice: computedPrice
+    };
+    const json = JSON.stringify(configData, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `nova-config-${Date.now()}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
   };

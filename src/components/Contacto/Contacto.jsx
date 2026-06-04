@@ -5,10 +5,62 @@ const MODELS = ['Nova GT-R', 'Nova Phantom S', 'Nova Apex X', 'Nova Titan', 'Nov
 
 export default function Contacto() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    model: '',
+    message: ''
+  });
 
-  const handleSend = () => {
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+    setError('');
+  };
+
+  const validateForm = () => {
+    if (!form.name.trim()) return 'Por favor ingresa tu nombre';
+    if (!form.email.trim()) return 'Por favor ingresa tu correo';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return 'Correo inválido';
+    if (!form.model) return 'Por favor selecciona un modelo';
+    if (!form.message.trim()) return 'Por favor ingresa un mensaje';
+    return '';
+  };
+
+  const handleSend = async () => {
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch('https://formspree.io/f/xyzpqwer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          model: form.model,
+          message: form.message
+        })
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setForm({ name: '', email: '', model: '', message: '' });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        setError('Error al enviar. Intenta de nuevo.');
+      }
+    } catch (err) {
+      setError('Error de conexión. Intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -22,27 +74,57 @@ export default function Contacto() {
         <div className="reveal left">
           <div className="cf-group">
             <label className="cf-lbl">Nombre completo</label>
-            <input className="cf-in" placeholder="Tu nombre..." />
+            <input 
+              className="cf-in" 
+              placeholder="Tu nombre..." 
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+            />
           </div>
           <div className="cf-group">
             <label className="cf-lbl">Correo electrónico</label>
-            <input className="cf-in" type="email" placeholder="tu@correo.com" />
+            <input 
+              className="cf-in" 
+              type="email" 
+              placeholder="tu@correo.com" 
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+            />
           </div>
           <div className="cf-group">
             <label className="cf-lbl">Modelo de interés</label>
-            <select className="cf-in" style={{ cursor: 'pointer' }}>
+            <select 
+              className="cf-in" 
+              style={{ cursor: 'pointer' }}
+              name="model"
+              value={form.model}
+              onChange={handleChange}
+            >
               <option value="">Seleccionar...</option>
-              {MODELS.map((m) => <option key={m}>{m}</option>)}
+              {MODELS.map((m) => <option key={m} value={m}>{m}</option>)}
             </select>
           </div>
           <div className="cf-group">
             <label className="cf-lbl">Mensaje</label>
-            <textarea className="cf-in" placeholder="¿En qué podemos ayudarte?" />
+            <textarea 
+              className="cf-in" 
+              placeholder="¿En qué podemos ayudarte?" 
+              name="message"
+              value={form.message}
+              onChange={handleChange}
+            />
           </div>
-          <button className="btn-submit" onClick={handleSend}>
+          <button 
+            className="btn-submit" 
+            onClick={handleSend}
+            disabled={loading}
+          >
             <i className="ti ti-send" style={{ marginRight: 6 }} aria-hidden="true" />
-            Enviar mensaje
+            {loading ? 'Enviando...' : 'Enviar mensaje'}
           </button>
+          {error && <div style={{ color: '#FF6B6B', marginTop: 12, fontSize: 14 }}>{error}</div>}
           {sent && <div className="ok-msg">Mensaje enviado. Te contactaremos pronto.</div>}
         </div>
 
