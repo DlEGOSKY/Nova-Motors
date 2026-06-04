@@ -33,3 +33,49 @@
   display:block;
   padding:10px;
 }
+
+.price-filter{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+.price-label{
+  font-size:12px;
+  font-weight:600;
+  color:var(--t2);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.price-buttons{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.price-btn{
+  padding:6px 12px;
+  background:var(--glass);
+  border:1px solid var(--t3);
+  color:var(--t2);
+  border-radius:20px;
+  font-size:11px;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:all .2s;
+  letter-spacing:.5px;
+}
+
+.price-btn:hover{
+  border-color:var(--b);
+  color:var(--b);
+}
+
+.price-btn.on{
+  border-color:var(--b);
+  color:var(--b);
+  background:rgba(0,200,255,.08);
+}

@@ -4,7 +4,15 @@ import { cSVG } from '../../utils/carSvg';
 import { useApp } from '../../context/AppContext';
 import './Catalogo.css';
 
-const FILTERS = ['Todos', 'Deportivo', 'SUV', 'Eléctrico', 'Hypercar'];
+const FILTERS = ['Todos', 'Deportivo', 'Hypercar', 'SUV', 'Eléctrico', 'Clásico'];
+
+const PRICE_RANGES = [
+  { label: 'Todos', min: 0, max: Infinity },
+  { label: 'Menos de $500k', min: 0, max: 500000 },
+  { label: '$500k - $1M', min: 500000, max: 1000000 },
+  { label: '$1M - $2M', min: 1000000, max: 2000000 },
+  { label: 'Más de $2M', min: 2000000, max: Infinity },
+];
 
 function scrollTo(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -53,14 +61,19 @@ function CarCard({ car, onConfigure }) {
 
 export default function Catalogo() {
   const [filter, setFilter] = useState('Todos');
+  const [priceRange, setPriceRange] = useState('Todos');
   const [query, setQuery] = useState('');
   const gridRef = useRef(null);
   const { updateCfg } = useApp();
 
+  const priceFilter = PRICE_RANGES.find(p => p.label === priceRange) || PRICE_RANGES[0];
+
   const filtered = CARS.filter(
     (c) =>
       c.name.toLowerCase().includes(query.toLowerCase()) &&
-      (filter === 'Todos' || c.cat === filter)
+      (filter === 'Todos' || c.cat === filter) &&
+      c.price >= priceFilter.min &&
+      c.price <= priceFilter.max
   );
 
   const handleConfigure = (id) => {
@@ -104,6 +117,21 @@ export default function Catalogo() {
             {f}
           </button>
         ))}
+      </div>
+
+      <div className="price-filter reveal up">
+        <span className="price-label">Rango de precio:</span>
+        <div className="price-buttons">
+          {PRICE_RANGES.map((p) => (
+            <button
+              key={p.label}
+              className={`price-btn${priceRange === p.label ? ' on' : ''}`}
+              onClick={() => setPriceRange(p.label)}
+            >
+              {p.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="car-grid stagger" ref={gridRef}>

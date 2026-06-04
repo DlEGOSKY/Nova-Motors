@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Catalogo from './components/Catalogo/Catalogo';
 import Configurador from './components/Configurador/Configurador';
+import Comparador from './components/Comparador/Comparador';
 import Nosotros from './components/Nosotros/Nosotros';
 import Contacto from './components/Contacto/Contacto';
 import Footer from './components/Footer/Footer';
@@ -31,6 +32,8 @@ function AppInner() {
       <Hero />
       <Catalogo />
       <Configurador />
+      <Comparador />
+      <Showroom />
       <Nosotros />
       <Contacto />
       <Footer />
