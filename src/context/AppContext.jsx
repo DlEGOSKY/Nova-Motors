@@ -12,6 +12,8 @@ export function AppProvider({ children }) {
     colorName: 'Negro Abismo',
     seatColor: '#8B4513',
     seatColorName: 'Marrón Natural',
+    wheelColor: '#FFD700',
+    wheelColorName: 'Dorado',
     s: 'Cuero Liso',
     w: '18" Radial',
     i: 'Nogal',

@@ -24,6 +24,18 @@ const SEAT_COLORS = [
   { c: '#4A4A4A', n: 'Gris Acero' },
   { c: '#5C3D2E', n: 'Caramelo' },
 ];
+
+const WHEEL_COLORS = [
+  { c: '#111111', n: 'Negro' },
+  { c: '#C0C0C0', n: 'Plata' },
+  { c: '#FFD700', n: 'Dorado' },
+  { c: '#0066FF', n: 'Azul' },
+  { c: '#CC0000', n: 'Rojo' },
+  { c: '#0A7D32', n: 'Verde' },
+  { c: '#FFFFFF', n: 'Blanco' },
+  { c: '#555555', n: 'Grafito' }
+];
+
 const SEATS  = ['Cuero Liso', 'Cuero Sport', 'Alcantara', 'Tejido'];
 const WHEELS = ['18" Radial', '20" Turbina', '22" Multirayon', '21" Forjada'];
 const INTERIOR = ['Nogal', 'Carbono', 'Aluminio', 'Piano Black'];
@@ -67,21 +79,58 @@ useEffect(() => {
 
     if (!model.object3D) return;
 
-    model.object3D.traverse((node) => {
-      if (node.isMesh && node.material) {
-        const nodeName = node.name.toLowerCase();
-        
-        if (nodeName.includes('seat') || nodeName.includes('interior') || nodeName.includes('asiento')) {
-          node.material.color.set(cfg.seatColor);
-        } else if (nodeName.includes('wheel') || nodeName.includes('llanta') || nodeName.includes('tire')) {
-          node.material.color.set('#1A1A1A');
-        } else if (nodeName.includes('glass') || nodeName.includes('window') || nodeName.includes('cristal')) {
-          node.material.color.set('#1A2A4A');
-        } else {
-          node.material.color.set(cfg.color);
-        }
-      }
-    });
+  model.object3D.traverse((node) => {
+  if (node.isMesh && node.material) {
+
+    console.log("PIEZA:", node.name);
+
+    const nodeName = node.name.toLowerCase();
+
+  if (
+  nodeName.includes('seat') ||
+  nodeName.includes('interior') ||
+  nodeName.includes('asiento')
+) {
+
+  node.material.color.set(cfg.seatColor);
+
+}else if (
+  nodeName.includes('paint') ||
+  nodeName.includes('coloured')
+) {
+  console.log('CARROCERIA REAL:', node.name);
+  node.material.color.set(cfg.color);
+
+} else if (
+  nodeName.includes('wheel') ||
+  nodeName.includes('wheel1a') ||
+  nodeName.includes('hubcap')||
+  nodeName.includes('rim')
+) {
+
+  node.material.color.set(cfg.wheelColor);
+
+} else if (
+  nodeName.includes('tire')
+) {
+
+  node.material.color.set('#111111');
+
+} else if (
+  nodeName.includes('glass') ||
+  nodeName.includes('window') ||
+  nodeName.includes('cristal')
+) {
+
+  node.material.color.set('#1A2A4A');
+
+} else {
+
+  node.material.color.set(cfg.color);
+
+}
+  }
+});
 
   };
 
@@ -93,7 +142,7 @@ useEffect(() => {
     model.removeEventListener("model-loaded", applyColor);
   };
 
-}, [cfg.color, cfg.seatColor]);
+}, [cfg.color, cfg.seatColor, cfg.wheelColor]);
 
   return (
     <section id="configurador" className="sec-alt cfg-section">
@@ -150,15 +199,25 @@ useEffect(() => {
           </div>
 
           <div className="cgrp">
-            <div className="clbl">Llantas</div>
-            <div className="copts">
-              {WHEELS.map((w) => (
-                <div key={w} className={`copt${cfg.w === w ? ' on' : ''}`} onClick={() => updateCfg({ w })}>
-                  {w}
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="clbl">Color de Rines</div>
+
+  <div className="ccolors">
+    {WHEEL_COLORS.map((col) => (
+      <div
+        key={col.c}
+        className={`ccol${cfg.wheelColor === col.c ? ' on' : ''}`}
+        style={{ background: col.c }}
+        title={col.n}
+        onClick={() =>
+          updateCfg({
+            wheelColor: col.c,
+            wheelColorName: col.n
+          })
+        }
+      />
+    ))}
+  </div>
+</div>
 
           <div className="cgrp">
             <div className="clbl">Interior</div>
