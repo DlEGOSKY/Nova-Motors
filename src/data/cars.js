@@ -98,7 +98,7 @@ export const CARS = [
 },
 {
   id: 6,
-  name: 'Bugatti Centodieci 2020',
+  name: 'Lamborghini Asterion LPI910-4 Concept 2014',
   cat: 'Hypercar',
   price: 9000000,
   hp: 1600,
@@ -109,7 +109,7 @@ export const CARS = [
   image: '/img/imgcarro6.jpg',
   model: '/models/body/car6.glb',
 
-  scale: '15 15 15',
+  scale: '700 700 700',
   position: '0 0 0',
   rotation: '0 180 0',
 
@@ -119,7 +119,7 @@ export const CARS = [
 },
 {
   id: 7,
-  name: 'Porsche Panamera Turbo 2017',
+  name: 'Roadster Lamborghini Centenario 2017',
   cat: 'Deportivo',
   price: 150000,
   hp: 550,

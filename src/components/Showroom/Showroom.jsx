@@ -26,13 +26,13 @@ export default function Showroom() {
             intensity="4">
           </a-light>
 
-          <a-camera position="0 2 15"></a-camera>
+          <a-camera position="0 3 25"></a-camera>
 
           <a-entity
             gltf-model="/models/body/car.glb"
             position="0 0 0"
             rotation="0 180 0"
-            scale="0.1 0.1 0.1">
+            scale="15 15 15">
           </a-entity>
         </a-scene>
       </div>
