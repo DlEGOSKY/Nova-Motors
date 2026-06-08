@@ -230,15 +230,25 @@ useEffect(() => {
           </div>
 
           <div className="cgrp">
-            <div className="clbl">Llantas</div>
-            <div className="copts">
-              {WHEELS.map((w) => (
-                <div key={w} className={`copt${cfg.w === w ? ' on' : ''}`} onClick={() => updateCfg({ w })}>
-                  {w}
-                </div>
-              ))}
-            </div>
-          </div>
+  <div className="clbl">Color de Rines</div>
+
+  <div className="ccolors">
+    {WHEEL_COLORS.map((col) => (
+      <div
+        key={col.c}
+        className={`ccol${cfg.wheelColor === col.c ? ' on' : ''}`}
+        style={{ background: col.c }}
+        title={col.n}
+        onClick={() =>
+          updateCfg({
+            wheelColor: col.c,
+            wheelColorName: col.n
+          })
+        }
+      />
+    ))}
+  </div>
+</div>
 
           <div className="cgrp">
   <div className="clbl">Color de Rines</div>
