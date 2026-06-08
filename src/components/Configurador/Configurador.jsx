@@ -47,8 +47,10 @@ const EXTRAS = [
 ];
 
 export default function Configurador() {
-  const { cfg, updateCfg, sw, toggleSw, computedPrice } = useApp();
+  const { cfg, updateCfg, sw, toggleSw, computedPrice, toggleFav, favs } = useApp();
   const [saved, setSaved] = useState(false);
+  const [shared, setShared] = useState(false);
+  const [addedToFav, setAddedToFav] = useState(false);
 
   const handleSave = () => {
     const configData = {
@@ -67,6 +69,46 @@ export default function Configurador() {
     URL.revokeObjectURL(url);
     setSaved(true);
     setTimeout(() => setSaved(false), 3000);
+  };
+
+  const handleAddToFavorites = () => {
+    // Guardar configuración en localStorage como favorito
+    const favConfig = {
+      id: `config-${Date.now()}`,
+      ...cfg,
+      extras: sw,
+      totalPrice: computedPrice,
+      timestamp: new Date().toISOString()
+    };
+    
+    const existingFavs = JSON.parse(localStorage.getItem('nova_fav_configs') || '[]');
+    existingFavs.push(favConfig);
+    localStorage.setItem('nova_fav_configs', JSON.stringify(existingFavs));
+    
+    setAddedToFav(true);
+    setTimeout(() => setAddedToFav(false), 3000);
+  };
+
+  const handleShare = async () => {
+    const shareData = {
+      title: 'Mi configuración Nova Motors',
+      text: `Configuración personalizada: ${cfg.colorName} - ${cfg.s} - $${Math.round(computedPrice).toLocaleString()}`,
+      url: window.location.href
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        // Fallback: copiar al portapapeles
+        const configUrl = `${window.location.origin}?config=${btoa(JSON.stringify({ cfg, sw, computedPrice }))}`;
+        await navigator.clipboard.writeText(configUrl);
+        setShared(true);
+        setTimeout(() => setShared(false), 3000);
+      }
+    } catch (err) {
+      console.log('Error al compartir:', err);
+    }
   };
 
 useEffect(() => {
@@ -370,14 +412,16 @@ useEffect(() => {
             <button className="cact cact-fill" onClick={handleSave}>
               <i className="ti ti-download" style={{ marginRight: 5 }} aria-hidden="true" />Guardar
             </button>
-            <button className="cact cact-out">
+            <button className="cact cact-out" onClick={handleAddToFavorites}>
               <i className="ti ti-heart" style={{ marginRight: 5 }} aria-hidden="true" />Favorito
             </button>
-            <button className="cact cact-out">
+            <button className="cact cact-out" onClick={handleShare}>
               <i className="ti ti-share" style={{ marginRight: 5 }} aria-hidden="true" />Compartir
             </button>
           </div>
           {saved && <div className="csaved">Configuración guardada</div>}
+          {addedToFav && <div className="csaved">Agregado a favoritos</div>}
+          {shared && <div className="csaved">Link copiado al portapapeles</div>}
         </div>
       </div>
     </section>
