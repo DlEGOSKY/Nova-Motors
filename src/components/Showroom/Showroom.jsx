@@ -45,19 +45,19 @@ export default function Showroom() {
 
           <a-entity
             gltf-model="/models/body/car.glb"
-            position="0 0 0"
+            position="0 -2 0"
             rotation="0 180 0"
-            scale="15 15 15"
+            scale="12 12 12"
             animation="property: rotation; to: 0 540 0; loop: true; dur: 30000; easing: linear">
           </a-entity>
 
           <a-camera 
-            position="0 3 25"
+            position="0 5 30"
             orbit-controls="
               target: 0 0 0;
-              minDistance: 10;
-              maxDistance: 50;
-              initialPosition: 0 3 25;
+              minDistance: 15;
+              maxDistance: 60;
+              initialPosition: 0 5 30;
               enableDamping: true;
               dampingFactor: 0.1;
               rotateSpeed: 0.5;

@@ -53,22 +53,26 @@ export default function Configurador() {
   const [addedToFav, setAddedToFav] = useState(false);
 
   const handleSave = () => {
-    const configData = {
-      ...cfg,
-      extras: sw,
-      timestamp: new Date().toISOString(),
-      totalPrice: computedPrice
-    };
-    const json = JSON.stringify(configData, null, 2);
-    const blob = new Blob([json], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `nova-config-${Date.now()}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-    setSaved(true);
-    setTimeout(() => setSaved(false), 3000);
+    // Capturar la escena 3D como imagen
+    const scene = document.querySelector('a-scene');
+    if (scene && scene.components && scene.components.screenshot) {
+      scene.components.screenshot.capture('perspective');
+    } else {
+      // Fallback: capturar el canvas de A-Frame
+      const canvas = document.querySelector('a-scene canvas');
+      if (canvas) {
+        canvas.toBlob((blob) => {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `nova-motors-${Date.now()}.png`;
+          a.click();
+          URL.revokeObjectURL(url);
+          setSaved(true);
+          setTimeout(() => setSaved(false), 3000);
+        }, 'image/png');
+      }
+    }
   };
 
   const handleAddToFavorites = () => {
