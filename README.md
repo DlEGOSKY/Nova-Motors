@@ -1,4 +1,4 @@
-# 🚗 Nova Motors - Plataforma de Vehículos de Lujo
+# Nova Motors - Plataforma de Vehículos de Lujo
 
 **Nova Motors** es una aplicación web moderna para la visualización, configuración y comparación de vehículos de lujo en 3D. Desarrollada con React, Vite y A-Frame.
 
@@ -6,23 +6,23 @@
 
 ---
 
-## 📋 Tabla de Contenidos
+## Tabla de Contenidos
 
-- [Características](#-características)
-- [Requisitos Previos](#-requisitos-previos)
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Funcionalidades](#-funcionalidades)
-- [Tecnologías](#-tecnologías)
-- [Despliegue](#-despliegue)
-- [Contribuir](#-contribuir)
+- [Características](#características)
+- [Requisitos Previos](#requisitos-previos)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologías](#tecnologías)
+- [Despliegue](#despliegue)
+- [Contribuir](#contribuir)
 
 ---
 
-## ✨ Características
+## Características
 
-### 🎨 Configurador 3D Avanzado
+### Configurador 3D Avanzado
 - **Visualización 3D en tiempo real** con A-Frame
 - **Personalización completa**:
   - 8 colores de carrocería
@@ -32,36 +32,36 @@
   - 4 tipos de interior
   - Extras configurables (techo panorámico, modo sport, alerón, LED)
 
-### 🏎️ Showroom 3D Interactivo
+### Showroom 3D Interactivo
 - Rotación automática del vehículo
 - Controles de órbita (mouse drag para rotar)
 - Zoom con scroll
 - Iluminación dinámica
 
-### 🔍 Comparador de Vehículos
+### Comparador de Vehículos
 - Compara hasta 3 vehículos simultáneamente
 - Especificaciones detalladas lado a lado
 - Filtrado inteligente
 
-### 📱 Diseño Responsive
+### Diseño Responsive
 - Optimizado para desktop, tablet y móvil
 - Breakpoints: 1024px, 768px, 480px
 - Layout adaptativo
 
-### 💾 Funcionalidades de Usuario
+### Funcionalidades de Usuario
 - **Guardar configuración** como imagen PNG
 - **Agregar a favoritos** (localStorage)
 - **Compartir configuración** (Web Share API / Clipboard)
 - **Persistencia de datos** en navegador
 
-### 🎯 Filtros Avanzados
+### Filtros Avanzados
 - Por categoría (Deportivo, Hypercar, SUV, Eléctrico, Clásico)
 - Por rango de precio
 - Búsqueda por nombre
 
 ---
 
-## 🔧 Requisitos Previos
+## Requisitos Previos
 
 Antes de comenzar, asegúrate de tener instalado:
 
@@ -78,7 +78,7 @@ git --version
 
 ---
 
-## 📦 Instalación
+## Instalación
 
 ### 1. Clonar el repositorio
 
@@ -108,7 +108,7 @@ npm list --depth=0
 
 ---
 
-## 🚀 Uso
+## Uso
 
 ### Desarrollo Local
 
@@ -150,7 +150,7 @@ npm run lint
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 nova-motors-react/
@@ -187,7 +187,7 @@ nova-motors-react/
 
 ---
 
-## 🎯 Funcionalidades
+## Funcionalidades
 
 ### 1. Catálogo de Vehículos
 - **Visualización**: Grid responsive con cards de vehículos
@@ -249,7 +249,7 @@ nova-motors-react/
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 ### Frontend
 - **React 18.3.1**: Biblioteca UI
@@ -277,7 +277,7 @@ nova-motors-react/
 
 ---
 
-## 🌐 Despliegue
+## Despliegue
 
 ### Netlify (Recomendado)
 
@@ -300,7 +300,7 @@ npm run build
 
 ---
 
-## 📝 Configuración
+## Configuración
 
 ### Variables de Entorno
 
@@ -337,7 +337,7 @@ Edita `src/data/cars.js`:
 
 ---
 
-## 🤝 Contribuir
+## Contribuir
 
 1. Fork el proyecto
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
@@ -347,20 +347,20 @@ Edita `src/data/cars.js`:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es privado y pertenece a Nova Motors.
 
 ---
 
-## 👥 Autores
+## Autores
 
 - **Diego** - Desarrollo principal
 - **Equipo Nova Motors** - Diseño y concepto
 
 ---
 
-## 📞 Soporte
+## Soporte
 
 Para soporte y consultas:
 - **Email**: contacto@novamotors.com
@@ -368,24 +368,24 @@ Para soporte y consultas:
 
 ---
 
-## 🔄 Changelog
+## Changelog
 
 ### v2.0.0 (Junio 2026)
-- ✅ Sistema de colores mejorado (carrocería, asientos, rines)
-- ✅ Showroom 3D con controles de órbita
-- ✅ Comparador de vehículos
-- ✅ Filtros avanzados por precio
-- ✅ Guardar configuración como PNG
-- ✅ Sistema de favoritos y compartir
-- ✅ Diseño responsive completo
-- ✅ Animaciones y transiciones mejoradas
+- Sistema de colores mejorado (carrocería, asientos, rines)
+- Showroom 3D con controles de órbita
+- Comparador de vehículos
+- Filtros avanzados por precio
+- Guardar configuración como PNG
+- Sistema de favoritos y compartir
+- Diseño responsive completo
+- Animaciones y transiciones mejoradas
 
 ### v1.0.0 (Mayo 2026)
-- 🎉 Lanzamiento inicial
+- Lanzamiento inicial
 - Catálogo de vehículos
 - Configurador 3D básico
 - Formulario de contacto
 
 ---
 
-**Hecho con ❤️ por el equipo de Nova Motors**
+**Desarrollado por el equipo de Nova Motors**

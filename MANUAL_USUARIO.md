@@ -1,10 +1,10 @@
-# 📖 Manual de Usuario - Nova Motors
+# Manual de Usuario - Nova Motors
 
 ## Guía Completa de Uso de la Plataforma
 
 ---
 
-## 📑 Índice
+## Índice
 
 1. [Introducción](#introducción)
 2. [Acceso a la Plataforma](#acceso-a-la-plataforma)
@@ -19,22 +19,22 @@
 
 ---
 
-## 🎯 Introducción
+## 1. Introducción
 
 Bienvenido a **Nova Motors**, la plataforma líder en visualización y configuración de vehículos de lujo en 3D. Esta guía te ayudará a aprovechar al máximo todas las funcionalidades disponibles.
 
-### ¿Qué puedes hacer en Nova Motors?
+### Funcionalidades Principales
 
-- ✅ Explorar un catálogo completo de vehículos de lujo
-- ✅ Personalizar vehículos en 3D en tiempo real
-- ✅ Comparar hasta 3 vehículos simultáneamente
-- ✅ Guardar tus configuraciones favoritas
-- ✅ Compartir tus diseños personalizados
-- ✅ Contactar con nuestro equipo de ventas
+- Explorar un catálogo completo de vehículos de lujo
+- Personalizar vehículos en 3D en tiempo real
+- Comparar hasta 3 vehículos simultáneamente
+- Guardar tus configuraciones favoritas
+- Compartir tus diseños personalizados
+- Contactar con nuestro equipo de ventas
 
 ---
 
-## 🌐 Acceso a la Plataforma
+## 2. Acceso a la Plataforma
 
 ### Requisitos del Sistema
 
@@ -45,9 +45,9 @@ Bienvenido a **Nova Motors**, la plataforma líder en visualización y configura
 - Safari
 
 **Dispositivos:**
-- 💻 Desktop (Windows, macOS, Linux)
-- 📱 Móviles (iOS, Android)
-- 📱 Tablets
+- Desktop (Windows, macOS, Linux)
+- Móviles (iOS, Android)
+- Tablets
 
 ### URL de Acceso
 
@@ -62,7 +62,7 @@ http://localhost:5173
 
 ---
 
-## 🧭 Navegación Principal
+## 3. Navegación Principal
 
 ### Barra de Navegación
 
@@ -72,8 +72,8 @@ La barra superior contiene los siguientes enlaces:
 2. **CATÁLOGO** - Explora todos los vehículos disponibles
 3. **NOSOTROS** - Información sobre Nova Motors
 4. **CONTACTO** - Formulario de contacto
-5. **🌙 Modo Oscuro** - Alternar tema (próximamente)
-6. **❤️ Favoritos** - Panel de vehículos guardados
+5. **Modo Oscuro** - Alternar tema (próximamente)
+6. **Favoritos** - Panel de vehículos guardados
 
 ### Secciones de la Página
 
@@ -88,7 +88,7 @@ La barra superior contiene los siguientes enlaces:
 
 ---
 
-## 🚗 Catálogo de Vehículos
+## 4. Catálogo de Vehículos
 
 ### Visualización del Catálogo
 
@@ -135,7 +135,7 @@ Usa la barra de búsqueda para encontrar vehículos específicos:
 
 #### Agregar a Favoritos
 
-1. Haz clic en el icono de corazón ❤️ en la tarjeta
+1. Haz clic en el icono de corazón en la tarjeta
 2. El vehículo se guarda en tu lista de favoritos
 3. El icono cambia de color para indicar que está guardado
 4. Haz clic nuevamente para quitar de favoritos
@@ -149,7 +149,7 @@ Usa la barra de búsqueda para encontrar vehículos específicos:
 
 ---
 
-## 🎨 Configurador 3D
+## 5. Configurador 3D
 
 El Configurador 3D es el corazón de Nova Motors. Aquí puedes personalizar cada aspecto de tu vehículo.
 
@@ -171,14 +171,14 @@ El configurador está dividido en 3 paneles:
 
 **8 colores disponibles:**
 
-- 🖤 **Negro Abismo**: Elegante y clásico
-- ⚪ **Blanco Óptico**: Limpio y moderno
-- 🔴 **Rojo Pasión**: Deportivo y llamativo
-- ⚫ **Gris Antracita**: Sofisticado
-- 🔵 **Azul Glaciar**: Fresco y premium
-- 🟢 **Verde Bosque**: Natural y exclusivo
-- 🟡 **Champán**: Lujo discreto
-- 🟣 **Morado**: Único y audaz
+- **Negro Abismo**: Elegante y clásico
+- **Blanco Óptico**: Limpio y moderno
+- **Rojo Pasión**: Deportivo y llamativo
+- **Gris Antracita**: Sofisticado
+- **Azul Glaciar**: Fresco y premium
+- **Verde Bosque**: Natural y exclusivo
+- **Champán**: Lujo discreto
+- **Morado**: Único y audaz
 
 **Cómo cambiar:**
 1. Haz clic en el círculo de color deseado
@@ -202,14 +202,14 @@ El configurador está dividido en 3 paneles:
 
 **8 colores disponibles:**
 
-- 🟤 **Marrón Natural**: Clásico
-- ⚫ **Negro Carbón**: Deportivo
-- ⚫ **Gris Oscuro**: Moderno
-- 🔴 **Rojo Vino**: Elegante
-- 🔵 **Azul Noche**: Sofisticado
-- 🟤 **Marrón Oscuro**: Tradicional
-- ⚫ **Gris Acero**: Industrial
-- 🟤 **Caramelo**: Cálido
+- **Marrón Natural**: Clásico
+- **Negro Carbón**: Deportivo
+- **Gris Oscuro**: Moderno
+- **Rojo Vino**: Elegante
+- **Azul Noche**: Sofisticado
+- **Marrón Oscuro**: Tradicional
+- **Gris Acero**: Industrial
+- **Caramelo**: Cálido
 
 **Nota:** El color de asientos se aplica al interior visible del modelo 3D.
 
@@ -226,14 +226,14 @@ El configurador está dividido en 3 paneles:
 
 **8 colores disponibles:**
 
-- ⚫ **Negro**: Deportivo
-- ⚪ **Plata**: Clásico
-- 🟡 **Dorado**: Exclusivo
-- 🔵 **Azul**: Llamativo
-- 🔴 **Rojo**: Agresivo
-- 🟢 **Verde**: Único
-- ⚪ **Blanco**: Limpio
-- ⚫ **Grafito**: Moderno
+- **Negro**: Deportivo
+- **Plata**: Clásico
+- **Dorado**: Exclusivo
+- **Azul**: Llamativo
+- **Rojo**: Agresivo
+- **Verde**: Único
+- **Blanco**: Limpio
+- **Grafito**: Moderno
 
 #### 6. Tipo de Interior
 
@@ -248,20 +248,20 @@ El configurador está dividido en 3 paneles:
 
 **4 opciones con switches:**
 
-- ☑️ **Techo Panorámico** (+$3,500)
+- **Techo Panorámico** (+$3,500)
   - Techo de cristal completo
   - Mejora la luminosidad interior
 
-- ☑️ **Modo Sport** (+$8,000)
+- **Modo Sport** (+$8,000)
   - Suspensión deportiva
   - Escape deportivo
   - Modos de conducción adicionales
 
-- ☑️ **Alerón Trasero** (+$2,200)
+- **Alerón Trasero** (+$2,200)
   - Mejora aerodinámica
   - Diseño deportivo
 
-- ☑️ **Matrix LED** (+$1,800)
+- **Matrix LED** (+$1,800)
   - Faros LED adaptativos
   - Mayor visibilidad nocturna
 
@@ -293,11 +293,11 @@ El configurador está dividido en 3 paneles:
 
 Todos los cambios se aplican instantáneamente:
 
-- ✅ Color de carrocería
-- ✅ Color de asientos (interior visible)
-- ✅ Color de rines
-- ✅ Cristales con transparencia
-- ✅ Neumáticos siempre negros
+- Color de carrocería
+- Color de asientos (interior visible)
+- Color de rines
+- Cristales con transparencia
+- Neumáticos siempre negros
 
 ### Panel Derecho: Resumen y Acciones
 
@@ -337,7 +337,7 @@ Lista detallada de todas las selecciones:
 
 #### Botones de Acción
 
-##### 1. 💾 Guardar
+##### 1. Guardar
 
 **Función:** Captura una imagen PNG del modelo 3D
 
@@ -353,7 +353,7 @@ Lista detallada de todas las selecciones:
 - Guardar para referencia
 - Enviar a amigos/familia
 
-##### 2. ❤️ Favorito
+##### 2. Favorito
 
 **Función:** Guarda la configuración completa en favoritos
 
@@ -364,11 +364,11 @@ Lista detallada de todas las selecciones:
 4. Incluye: colores, opciones, extras, precio, timestamp
 
 **Acceder a favoritos:**
-1. Haz clic en el icono ❤️ en la barra superior
+1. Haz clic en el icono de favoritos en la barra superior
 2. Se abre el panel lateral de favoritos
 3. Ve todas tus configuraciones guardadas
 
-##### 3. 🔗 Compartir
+##### 3. Compartir
 
 **Función:** Comparte tu configuración
 
@@ -385,7 +385,7 @@ Lista detallada de todas las selecciones:
 
 ---
 
-## ⚖️ Comparador de Vehículos
+## 6. Comparador de Vehículos
 
 ### Acceso al Comparador
 
@@ -404,9 +404,9 @@ El comparador está ubicado después del Configurador 3D en la página principal
 5. El 4º vehículo en adelante aparece deshabilitado
 
 **Indicadores visuales:**
-- ✅ **Seleccionado**: Borde azul, fondo iluminado
-- ⚪ **Disponible**: Borde gris, clickeable
-- 🚫 **Deshabilitado**: Opacidad reducida, no clickeable
+- **Seleccionado**: Borde azul, fondo iluminado
+- **Disponible**: Borde gris, clickeable
+- **Deshabilitado**: Opacidad reducida, no clickeable
 
 #### 2. Ver Comparación
 
@@ -451,7 +451,7 @@ La tabla muestra comparación lado a lado:
 
 ---
 
-## 🏎️ Showroom 3D
+## 7. Showroom 3D
 
 ### Acceso al Showroom
 
@@ -496,13 +496,13 @@ El Showroom 3D está ubicado después del Comparador en la página principal.
 
 ---
 
-## ❤️ Sistema de Favoritos
+## 8. Sistema de Favoritos
 
 ### Panel de Favoritos
 
 #### Abrir el Panel
 
-1. Haz clic en el icono ❤️ en la barra superior
+1. Haz clic en el icono de favoritos en la barra superior
 2. El panel se desliza desde la derecha
 3. Muestra todos tus vehículos y configuraciones favoritas
 
@@ -543,7 +543,7 @@ El Showroom 3D está ubicado después del Comparador en la página principal.
 
 ---
 
-## 📧 Contacto
+## 9. Contacto
 
 ### Formulario de Contacto
 
@@ -573,9 +573,9 @@ El Showroom 3D está ubicado después del Comparador en la página principal.
 5. Mensaje de éxito o error
 
 **Estados:**
-- ⏳ **Enviando**: Botón deshabilitado, spinner
-- ✅ **Éxito**: "Mensaje enviado correctamente"
-- ❌ **Error**: "Error al enviar. Intenta nuevamente"
+- **Enviando**: Botón deshabilitado, spinner
+- **Éxito**: "Mensaje enviado correctamente"
+- **Error**: "Error al enviar. Intenta nuevamente"
 
 #### Información de Contacto
 
@@ -607,7 +607,7 @@ Domingos: Cerrado
 
 ---
 
-## ❓ Preguntas Frecuentes
+## 10. Preguntas Frecuentes
 
 ### General
 
@@ -663,7 +663,7 @@ R: No, requiere conexión para cargar modelos y recursos.
 
 ---
 
-## 📞 Soporte Técnico
+## 11. Soporte Técnico
 
 ### Reportar un Problema
 
@@ -684,7 +684,7 @@ Nos encanta recibir tus ideas para mejorar la plataforma.
 
 ---
 
-## 🎓 Consejos y Trucos
+## 12. Consejos y Trucos
 
 ### Para Mejor Experiencia
 
@@ -713,6 +713,6 @@ Nos encanta recibir tus ideas para mejorar la plataforma.
 
 ---
 
-**¡Disfruta de Nova Motors!** 🚗✨
+**Disfruta de Nova Motors.**
 
 *Versión 2.0 - Junio 2026*
