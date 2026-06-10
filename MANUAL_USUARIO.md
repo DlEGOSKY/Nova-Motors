@@ -1,6 +1,8 @@
 # Manual de Usuario - Nova Motors
 
-## Guía Completa de Uso de la Plataforma
+**Guía Completa de Uso de la Plataforma**
+
+**Versión 2.0 - Junio 2026**
 
 ---
 
@@ -51,11 +53,12 @@ Bienvenido a **Nova Motors**, la plataforma líder en visualización y configura
 
 ### URL de Acceso
 
+**Producción:**
 ```
 https://nova-motors.netlify.app
 ```
 
-O en desarrollo local:
+**Desarrollo local:**
 ```
 http://localhost:5173
 ```
@@ -157,13 +160,9 @@ El Configurador 3D es el corazón de Nova Motors. Aquí puedes personalizar cada
 
 El configurador está dividido en 3 paneles:
 
-```
-┌─────────────┬──────────────┬─────────────┐
-│   Panel     │    Visor     │   Panel     │
-│ Izquierdo   │     3D       │  Derecho    │
-│(Opciones)   │ (Interactivo)│ (Resumen)   │
-└─────────────┴──────────────┴─────────────┘
-```
+| Panel Izquierdo | Visor 3D | Panel Derecho |
+|-----------------|----------|---------------|
+| Opciones de personalización | Modelo 3D interactivo | Resumen y acciones |
 
 ### Panel Izquierdo: Opciones de Personalización
 
@@ -414,17 +413,13 @@ El comparador está ubicado después del Configurador 3D en la página principal
 
 La tabla muestra comparación lado a lado:
 
-```
-┌──────────────┬─────────┬─────────┬─────────┐
-│ Especificación│ Carro 1 │ Carro 2 │ Carro 3 │
-├──────────────┼─────────┼─────────┼─────────┤
-│ Potencia     │ 770 HP  │ 830 HP  │ 650 HP  │
-│ Aceleración  │ 2.8s    │ 2.9s    │ 3.2s    │
-│ Vel. Máxima  │ 350 km/h│ 330 km/h│ 310 km/h│
-│ Autonomía    │ 450 km  │ 520 km  │ 600 km  │
-│ Precio       │ $507,000│ $322,000│ $450,000│
-└──────────────┴─────────┴─────────┴─────────┘
-```
+| Especificación | Vehículo 1 | Vehículo 2 | Vehículo 3 |
+|----------------|------------|------------|------------|
+| Potencia | 770 HP | 830 HP | 650 HP |
+| Aceleración 0-100 | 2.8s | 2.9s | 3.2s |
+| Velocidad Máxima | 350 km/h | 330 km/h | 310 km/h |
+| Autonomía | 450 km | 520 km | 600 km |
+| Precio | $507,000 | $322,000 | $450,000 |
 
 #### 3. Quitar Vehículos
 
@@ -580,30 +575,22 @@ El Showroom 3D está ubicado después del Comparador en la página principal.
 #### Información de Contacto
 
 **Dirección:**
-```
-Nova Motors Headquarters
-Av. Paseo de la Reforma 505
-Ciudad de México, CDMX 06500
-México
-```
+- Nova Motors Headquarters
+- Av. Paseo de la Reforma 505
+- Ciudad de México, CDMX 06500
+- México
 
 **Teléfono:**
-```
-+52 55 1234 5678
-```
+- +52 55 1234 5678
 
 **Email:**
-```
-contacto@novamotors.com
-ventas@novamotors.com
-```
+- contacto@novamotors.com
+- ventas@novamotors.com
 
-**Horario:**
-```
-Lunes a Viernes: 9:00 AM - 7:00 PM
-Sábados: 10:00 AM - 6:00 PM
-Domingos: Cerrado
-```
+**Horario de Atención:**
+- Lunes a Viernes: 9:00 AM - 7:00 PM
+- Sábados: 10:00 AM - 6:00 PM
+- Domingos: Cerrado
 
 ---
 
